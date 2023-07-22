@@ -1,0 +1,21 @@
+body {
+    background-image: url(./images/bg.png);
+}
+
+.head {
+    width: 300px;
+    height: 300px;
+}
+
+.profile {
+    width: 300px;
+    margin: auto;
+}
+
+.text {
+    width: 300px;
+    height: 306px;
+    background-color: #9C6035;
+    border-radius: 0px, 0px, 30px, 30px;
+    border-bottom: 10px solid #46260E;
+}

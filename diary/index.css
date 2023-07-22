@@ -1,3 +1,4 @@
+/* font --------------------------------- */
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -6,19 +7,23 @@
 }
 
 @font-face {
-    font-family: 'Pretendar-Bold';
+    font-family: 'Pretendard-Bold';
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
 
+/* reset --------------------------------- */
 body {
     margin: 0;
 }
 
-h1 {
-    padding: 0;
+h1,
+h2,
+h3 {
     margin: 0;
+    padding: 0;
+    font: inherit;
 }
 
 img {
@@ -30,9 +35,41 @@ a {
     text-decoration: none;
 }
 
-button,
-input {
+input,
+button {
     font: inherit;
+}
+
+button {
+    border: 0;
+    background: none;
+}
+
+button:enabled {
+    cursor: pointer;
+}
+
+ol,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+/* CSS 적용 --------------------------------- */
+.a11y-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
 }
 
 body {
@@ -42,12 +79,14 @@ body {
 
 .max-width {
     width: 1284px;
+    max-width: 100%;
     max-width: calc(100% - 60px);
     margin: auto;
 }
 
+/* header */
 .header {
-    background-color: #FFF;
+    background-color: #fff;
 }
 
 .header .max-width {
@@ -61,24 +100,52 @@ body {
     width: 156px;
 }
 
+/* index.html  */
+.header .login-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header .login-text p::after {
+    content: '|';
+    color: #d8ddde;
+    margin-left: 24px;
+}
+
+.header .login-text p strong {
+    font-family: 'Pretendard-Bold';
+    box-shadow: inset 0 -0.5em 0 rgba(255, 79, 110, 0.8);
+}
+
+/* footer */
 .footer {
     text-align: center;
     color: #677880;
     font-size: 12px;
 }
 
-.btn-join {
+/* 버튼 */
+[class^='btn'] {
     display: inline-flex;
     height: 40px;
     padding: 0 20px 0 52px;
-    align-items: center;
     background-color: #fff;
-    background-image: url(./img/icon-join.svg);
     background-repeat: no-repeat;
     background-size: 32px;
     background-position: 10px 50%;
+    align-items: center;
 }
 
+.btn-join {
+    background-image: url(../img/icon-join.svg);
+}
+
+.btn-logout {
+    background-image: url(../img/icon-join.svg);
+}
+
+/* 로그인 */
 .login {
     margin-top: 70px;
 }
@@ -89,11 +156,11 @@ body {
     text-align: center;
 }
 
-
 .main-title svg {
     display: block;
     width: 100%;
     margin-bottom: 30px;
+    position: relative;
 }
 
 .svg-heart {
@@ -105,18 +172,10 @@ body {
 }
 
 @keyframes heart {
-    /*50% {
-        stroke: #ffc7d1;
-        stroke-width: 2px;
-        scale: 2;
-        rotate: -20deg;
-    }*/
-
     100% {
         stroke: #ffc7d1;
         stroke-width: 2px;
         scale: 2.5;
-        /*rotate: 20deg;*/
     }
 }
 
@@ -128,10 +187,10 @@ body {
     border-bottom: 2px solid #ff4f6e;
 }
 
-.form {
+/* 로그인 form */
+.login .form {
     width: 392px;
     margin: 40px auto 50px;
-
 }
 
 .form label {
@@ -144,7 +203,8 @@ body {
 .form input {
     width: 100%;
     height: 48px;
-    padding: 0;
+    padding: 10px;
+    box-sizing: border-box;
     border: 0;
     border-bottom: 1px solid #677880;
     border-radius: 4px 4px 0 0;
@@ -158,7 +218,20 @@ body {
     width: 100%;
     height: 48px;
 
-    background-color: #29363D;
-    color: #F4F5F5;
+    background-color: #29363d;
+    color: #f4f5f5;
     border-radius: 4px;
+}
+
+.form textarea {
+    display: block;
+    width: 100%;
+    height: 360px;
+    border: 1px solid #677880;
+    border-radius: 4px;
+    resize: none;
+
+    box-sizing: border-box;
+    padding: 10px;
+    font: inherit;
 }

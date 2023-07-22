@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: top;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+button {
+    font: inherit;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+    background-color: #FFFAF0;
+}
+
+.max-width {
+    width: 1284px;
+    max-width: calc(100% - 60px);
+    margin: auto;
+}
+
+.header {
+    background-color: #FFF;
+}
+
+.header .max-width {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    width: 156px;
+
+}
+
+.footer {
+    text-align: center;
+    color: #677880;
+    font-size: 12px;
+}
+
+.btn-join {
+    color: #5A6A72;
+    height: 40px;
+    padding: 0 20px 0 46px;
+    background: url(./img/icon-join.svg);
+    background-repeat: no-repeat;
+    display: inline-flex;
+    background-size: 32px;
+    background-position: 10px 50%;
+    align-items: center;
+}
+
+.login {
+    margin-top: 70px;
+}
+
+.main-title {
+    width: 250px;
+    margin: auto;
+    text-align: center;
+}
+
+.main-title img {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.main-title strong {
+    color: #29363D;
+    font-size: 24px;
+    font-family: 'Pretendard-Bold';
+    border-bottom: 2px solid #FF4F6E;
+    box-shadow: inset 0 -0.5em 0 rgba(255, 79, 110, 0.2);
+}
+
+.form label {
+    display: block;
+}
