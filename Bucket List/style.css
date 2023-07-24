@@ -9,6 +9,16 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.header::before {
+    content: '';
+    width: 8px;
+    height: 32px;
+    border-radius: 0px 10px 10px 0px;
+    background: #FF007A;
+
 }
 
 .header {
