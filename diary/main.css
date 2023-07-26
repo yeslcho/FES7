@@ -18,3 +18,12 @@ body {
     margin-bottom: 16px;
     background-position: 0 0;
 }
+
+.main {
+    display: flex;
+    gap: 40px;
+}
+
+.main>section {
+    flex-basis: 0;
+}
