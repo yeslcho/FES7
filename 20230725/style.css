@@ -34,6 +34,10 @@ strong {
     font: inherit;
 }
 
+img {
+    vertical-align: top;
+}
+
 .a11y-hidden {
     clip: rect(1px, 1px, 1px, 1px);
     clip-path: inset(50%);
@@ -52,18 +56,89 @@ body {
 
 
 .box {
+    display: flex;
+    flex-direction: column;
     width: 520px;
+    margin: auto;
     background-color: #FFFFFF;
     border-radius: 10px;
+    justify-content: center;
 
 }
 
 header {
+    position: relative;
+    border-bottom: 1px solid #C4C4C4;
+}
+
+header h2 {
+
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 18px;
+    text-align: center;
+
+}
+
+.btn-close {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+.section1 h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-left: 24px;
+    margin-top: 26px;
+    margin-bottom: 24px;
+}
+
+.form {
+    width: 472px;
+    margin: 0 24px;
+
+}
+
+
+.form .login input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    padding: 15px 16px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #C4C4C4;
+    background: #FFF;
+}
+
+.form .login-hold {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #767676;
+    font-weight: 500;
+}
+
+.form .login-hold label {
+    margin-left: 8px;
+}
+
+.btn-login {
+    width: 100%;
+    height: 50px;
+    margin: 20px auto;
+    border-radius: 5px;
+    background: #2F80ED;
+}
+
+/* header {
     width: 520px;
     height: 60px;
     text-align: center;
     border-bottom: 1px solid #C4C4C4;
-    position: relative;
+
 }
 
 header h2 {
@@ -145,7 +220,7 @@ header button {
     height: 22px;
     background-image: url('images_login/icon_sprites_retina.png');
     background-size: 117px 84px;
-}
+}*/
 
 .link-sns-login.icon-facebook {
     border: 1px solid #2D9CDB;
@@ -163,10 +238,10 @@ header button {
     width: 22px;
     height: 22px;
     background-position: -52px -10px;
-    /* background: url("images_login/icon_google.png") no-repeat; */
-}
+    /* background: url("images_login/icon_google.png") no-repeat; 
 
-.icon-naver::before {
+
+ .icon-naver::before {
     width: 22px;
     height: 22px;
     background-position: -10px -10px;
