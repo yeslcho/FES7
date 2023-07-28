@@ -114,14 +114,14 @@ header h2 {
     background: #FFF;
 }
 
-.form .login-hold {
-    margin-top: 5px;
+.form .hold {
+    margin-top: 7px;
     font-size: 16px;
     color: #767676;
     font-weight: 500;
 }
 
-.form .login-hold label {
+.form .hold label {
     margin-left: 8px;
 }
 
@@ -131,6 +131,23 @@ header h2 {
     margin: 20px auto;
     border-radius: 5px;
     background: #2F80ED;
+}
+
+.join {
+    color: #767676;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    margin-left: 158px;
+
+}
+
+.bar {
+    margin: 12px;
+}
+
+.section2 {
+    margin-top: 30px;
 }
 
 /* header {
