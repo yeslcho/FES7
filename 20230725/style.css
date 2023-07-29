@@ -150,6 +150,39 @@ header h2 {
     margin-top: 30px;
 }
 
+.or {
+    color: #767676;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 247px;
+}
+
+.account {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+[class^="icon"] {
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+    background: #FFF;
+}
+
+.account.icon-facebook {
+    border: 1px solid #2D9CDB;
+}
+
+.account.icon-naver {
+    border: 1px solid #00BF18;
+}
+
+.account.icon-kakao {
+    border: 1px solid #F2C94C;
+}
+
 /* header {
     width: 520px;
     height: 60px;
