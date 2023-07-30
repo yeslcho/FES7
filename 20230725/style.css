@@ -155,31 +155,64 @@ header h2 {
     font-size: 14px;
     font-weight: 400;
     text-align: center;
-    margin: 0 247px;
+    display: block;
+    margin: 0 24px;
+    position: relative;
+}
+
+.or::before,
+.or::after {
+    content: '';
+    height: 1px;
+    width: 210px;
+    background-color: #C4C4C4;
+    display: block;
+    position: absolute;
+    vertical-align: middle;
+}
+
+.or::before {
+    top: 50%;
+}
+
+.or::after {
+    top: 50%;
+    right: 0;
 }
 
 .account {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin: 28px 24px 25px 24px;
+    align-items: center;
 }
 
 [class^="icon"] {
+    display: block;
+    padding: 15px;
+    color: #767676;
+    text-align: center;
     border-radius: 5px;
     height: 50px;
     width: 100%;
     background: #FFF;
+    box-sizing: border-box;
 }
 
-.account.icon-facebook {
+.icon-google {
+    border: 1px solid #767676;
+}
+
+.icon-face {
     border: 1px solid #2D9CDB;
 }
 
-.account.icon-naver {
+.icon-naver {
     border: 1px solid #00BF18;
 }
 
-.account.icon-kakao {
+.icon-kakao {
     border: 1px solid #F2C94C;
 }
 
