@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 h1,
 h2,
 h3,
@@ -88,6 +95,7 @@ header h2 {
 }
 
 .section1 h3 {
+    font-family: 'SpoqaHanSansNeo-Regular';
     font-size: 20px;
     font-weight: 500;
     line-height: 24px;
@@ -116,13 +124,33 @@ header h2 {
 
 .form .hold {
     margin-top: 7px;
+
     font-size: 16px;
     color: #767676;
     font-weight: 500;
 }
 
-.form .hold label {
-    margin-left: 8px;
+
+
+.txt-hide {
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip-path: inset(50%);
+}
+
+.label-hold {
+    position: relative;
+}
+
+.label-hold::before {
+    display: inline-block;
+    content: '';
+    vertical-align: -5px;
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+    background: url(./images/check-box.svg)
 }
 
 .btn-login {
@@ -185,164 +213,81 @@ header h2 {
     flex-direction: column;
     gap: 10px;
     margin: 28px 24px 25px 24px;
-    align-items: center;
+
 }
 
 [class^="icon"] {
-    display: block;
-    padding: 15px;
+    display: flex;
+
     color: #767676;
     text-align: center;
     border-radius: 5px;
     height: 50px;
     width: 100%;
-    background: #FFF;
     box-sizing: border-box;
+    align-items: center;
+    position: relative;
+}
+
+.imgcon {
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 12px;
+}
+
+[class^="icon"] p {
+    margin: 0 auto;
 }
 
 .icon-google {
     border: 1px solid #767676;
+
 }
 
 .icon-face {
+
     border: 1px solid #2D9CDB;
 }
 
 .icon-naver {
     border: 1px solid #00BF18;
+
+
 }
 
 .icon-kakao {
     border: 1px solid #F2C94C;
 }
 
-/* header {
-    width: 520px;
-    height: 60px;
-    text-align: center;
-    border-bottom: 1px solid #C4C4C4;
-
-}
-
-header h2 {
-    padding: 20px;
-    font-size: 16px;
-}
-
-header button {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    top: 35%;
-    right: 24px;
-}
-
-.section1 h3 {
-    font-size: 20px;
-    font-weight: 500;
-    margin: 24px;
-}
-
-.form {
-    width: 472px;
-    margin-left: 24px;
-    display: block;
-}
-
-.logn {
-    border-radius: 5px;
-    border: 1px solid #C4C4C4;
-    background: #FFF;
-}
-
-.login input {
-    width: 100%;
-    height: 50px;
-    margin-bottom: 10px;
-    padding: 15px;
-    box-sizing: border-box;
-}
-
-.login-hold input {
-    margin-top: 7px;
-    margin-bottom: 21px;
-}
-
-.btn-login {
-    width: 100%;
-    height: 50px;
-    border-radius: 5px;
-    background-color: #2F80ED;
-    color: #FFF;
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.section1 strong {
-    display: block;
-    text-align: center;
-    color: #767676;
-    font-size: 14px;
-    font-weight: 400;
-    margin: auto;
-    position: relative;
-}
-
-.section1 span {
-    margin: 0 12px;
-}
-
-
-
-[class^="icon"]::before {
-    position: absolute;
-    display: block;
-    content: "";
-    width: 22px;
-    height: 22px;
-    background-image: url('images_login/icon_sprites_retina.png');
-    background-size: 117px 84px;
-}*/
-
-.link-sns-login.icon-facebook {
-    border: 1px solid #2D9CDB;
-}
-
-.link-sns-login.icon-naver {
-    border: 1px solid #00BF18;
-}
-
-.link-sns-login.icon-kakao {
-    border: 1px solid #F2C94C;
-}
-
 .icon-google::before {
-    width: 22px;
-    height: 22px;
-    background-position: -52px -10px;
-    /* background: url("images_login/icon_google.png") no-repeat; 
 
-
- .icon-naver::before {
     width: 22px;
     height: 22px;
     background-position: -10px -10px;
-    /* background: url("images_login/icon_naver.png") no-repeat; */
+    background-image: url(./images/icon_google.png);
+    background-repeat: no-repeat;
+}
+
+.icon-naver::before {
+    width: 22px;
+    height: 22px;
+    background-position: -10px -10px;
+    background: url(./images/icon_naver.png);
 }
 
 .icon-kakao::before {
     width: 22px;
     height: 22px;
     background-position: -10px -52px;
-    /* background: url("images_login/icon_kakao.png") no-repeat; */
+    background: url("./images/icon_kakao.png") no-repeat;
 }
 
-.icon-facebook::before {
+.icon-face::before {
     height: 24px;
     width: 13px;
     background-position: -93px -10px;
 
-    /* background: url("images_login/icon_facebook.png") center no-repeat; */
+    background: url(./images/icon_facebook.png) center no-repeat;
 
 }

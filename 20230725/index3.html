@@ -30,8 +30,8 @@
                         <input id="user-pw" type="password" placeholder="비밀번호">
                     </div>
                     <div class="hold">
-                        <input id="inpHold" type="checkbox">
-                        <label for="inpHold">로그인 상태 유지</label>
+                        <input class="loghold txt-hide" id="inpHold" type="checkbox">
+                        <label class="label-hold" for="inpHold">로그인 상태 유지</label>
                     </div>
                     <button type="button" class="btn-login">로그인</button>
                 </form>
@@ -42,10 +42,19 @@
                 <h2 class="a11y-hidden">다른 계정으로 로그인</h2>
                 <strong class="or">또는</strong>
                 <div class="account">
-                    <a class="icon-google" href="#">구글 계정으로 로그인</a>
-                    <a class="icon-face" href="#">페이스북 계정으로 로그인</a>
-                    <a class="icon-naver" href="#">네이버 계정으로 로그인</a>
-                    <a class="icon-kakao" href="#">카카오 계정으로 로그인</a>
+                    <button type="button" class="icon-google" href="#">
+                        <img class="imgcon" src="./images/icon_google.png" alt="">
+                        <p>구글 계정으로 로그인</p>
+                    </button>
+                    <button type="button" class="icon-face" href="#"><img src="./images/icon_facebook.png" alt="">
+                        <p>페이스북 계정으로 로그인</p>
+                    </button>
+                    <button type="button" class="icon-naver" href="#"><img src="./images/icon_naver.png" alt="">
+                        <p>네이버 계정으로 로그인</p>
+                    </button>
+                    <button type="button" class="icon-kakao" href="#"><img src="./images/icon_kakao.png" alt="">
+                        <p>카카오 계정으로 로그인</p>
+                    </button>
                 </div>
             </section>
         </main>
