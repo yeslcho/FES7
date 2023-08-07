@@ -124,10 +124,12 @@ header h2 {
 
 .form .hold {
     margin-top: 7px;
-
+    height: auto;
     font-size: 16px;
     color: #767676;
     font-weight: 500;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -140,10 +142,12 @@ header h2 {
 }
 
 .label-hold {
-    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.label-hold::before {
+/* .label-hold::before {
     display: inline-block;
     content: '';
     vertical-align: -5px;
@@ -151,7 +155,7 @@ header h2 {
     height: 22px;
     margin-right: 8px;
     background: url(./images/check-box.svg)
-}
+} */
 
 .btn-login {
     width: 100%;
