@@ -141,6 +141,15 @@ header h2 {
     clip-path: inset(50%);
 }
 
+.loghold:checked+label circle {
+    fill: #2f80ed;
+    stroke: #2f80ed;
+}
+
+.loghold:checked+label path {
+    stroke: white;
+}
+
 .label-hold {
     display: flex;
     align-items: center;

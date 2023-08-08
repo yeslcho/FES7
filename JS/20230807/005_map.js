@@ -74,3 +74,14 @@ function 함수(v) {
 [1, 2, 3, 4].map((v) => {
     return 'hello' + v
 })
+
+// forEach와 차이점
+// 1. forEach는 return이 없습니다.
+// 2. map은 새로운 배열을 만들고, forEach는 새로운 배열을 만들지 않고 순회 돌며 실행만 합니다.
+
+let x = [1, 2, 3, 4]
+let y = x.map(v => {
+    return v * 3
+})
+x // x는 수정되지 않습니다!
+y // [3, 6, 9, 12] 새로운 배열이 만들어집니다.
