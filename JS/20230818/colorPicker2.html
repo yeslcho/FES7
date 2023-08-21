@@ -50,8 +50,8 @@
 
         btns.forEach((itemBtn) => {
             itemBtn.addEventListener('click', () => {
-                canvas.className = 'canvas';
-                canvas.classList.add(itemBtn.className);
+                //canvas.className = 'canvas'; // 초기화
+                canvas.classList.add(itemBtn.className); // 
             });
         })
     </script>
