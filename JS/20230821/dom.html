@@ -20,21 +20,21 @@
 
 
     <script>
-        const text = document.createElement('p');
+        const text = document.createElement('p'); // 메모리 상에서만 존재
         const text2 = document.createElement('p');
         const textInside = document.createTextNode('문장입니다.');
         text.appendChild(textInside);
-        text2.appendChild(textInside);
+        text2.appendChild(textInside); //마지막 자식에 붙게 된다. 위에도 붙이고 싶으면 하나 더 만들어 줘야한다.
 
         const parent = document.querySelector('.parent');
 
         // parent.appendChild(text);
         // parent.appendChild(text2);
 
-        parent.append('text 입니다~', text, text2);
+        parent.append('text 입니다~', text, text2); // append는 여러개 요소를 한번에 붙일 수 있다
 
-        // parent.removeChild(text2);
-        // parent.remove();
+        // parent.removeChild(text2); // 특정요소의 자식만 지울 수 있음
+        // parent.remove(); // 그냥 지울 수 있음
 
         // li 한번에 여러개 만들기
         const myBtn = document.querySelector("button");

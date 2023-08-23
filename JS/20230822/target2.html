@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <article class="parent">
+        <ol>
+            <li><button class="btn-first" type="button">버튼1</button></li>
+            <li><button type="button">버튼2</button></li>
+            <li><button type="button">버튼3</button></li>
+        </ol>
+    </article>
+
+    <script>
+        const parent = document.querySelector('.parent');
+        parent.addEventListener('click', function (event) {
+            console.log(event.target);
+            if (event.target.nodeName === "BUTTON") {// 버튼은 대문자로 써줄 것! 이벤트 발생시킨 대상을 확인하고. 이번트를 발생하는 것처럼 보이고 싶은 요소를 넣어주면 됨. 버블링과 관련.
+                event.target.textContent = "버튼4"; // 맞으면 처리할 수 있는 코드를 넣어줌
+            }
+        });
+    </script>
+</body>
+
+</html>
