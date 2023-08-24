@@ -21,10 +21,10 @@
         const parent = document.querySelector('.parent');
         parent.addEventListener('click', (event) => {
 
-            console.log(this);
+            //console.log(this);
             console.log(event.currentTarget);
 
-            // 이벤트가 발생한 대상을 조건식으로 특정하기
+            //이벤트가 발생한 대상을 조건식으로 특정하기
             if (event.target.nodeName === "LI") {
                 event.target.textContent = "hello";
             }
