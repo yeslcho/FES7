@@ -31,7 +31,7 @@ function handleTab(e) {
         if (e.shiftKey) {
             // tab + shift 같이 눌렀을 때
             if (activeEl === firstEl) {
-                // e.preventDefault();
+                //e.preventDefault();
                 lastEl.focus();
             }
         } else {
