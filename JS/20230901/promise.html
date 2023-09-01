@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const orderCoffee = new Promise((resolve, reject) => { // resolve reject는 함수이다
+            const requestObj = new XMLHttpRequest();
+            requestObj.open('GET', 'orderCoffee.txt');
+            requestObj.onreadystatechange = () => {
+                if (requestObj.readyState === 4) {
+                    if (requestObj.status === 200) { // resolve함수가 실행됨. 
+                        const result = requestObj.responseText;
+                        resolve(result);
+                    } else {
+                        reject(new Error(`오늘의 커피 원두가 다 떨어졌습니다. ${requestObj.status}`));
+                    }
+                }
+            };
+            requestObj.send();
+        }); // 얘네들은 비동기!
+        // 콘솔로그 찍게 되면 비동기라 기다려 주지 않아서 pending이 찍히기 됨
+
+        orderCoffee.then((asyncResult) => {
+            console.log(asyncResult);
+        }).catch((error) => {
+            console.log(error);
+        });
+    </script>
+</body>
+
+</html>

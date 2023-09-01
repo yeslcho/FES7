@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documnet</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        class UserStorage {
+            // 사용자가 입력한 값과 유저 정보가 일치하는 유저를 찾습니다.
+            searchUser(userName, password, onSuccess, onError) {
+
+                const requestObj = new XMLHttpRequest();
+                requestObj.open('GET', 'users.json'); // 요청 초기화
+                requestObj.onreadystatechange = () => {
+                    if (requestObj.readyState === 4 && requestObj.status === 200) {
+                        const result = JSON.parse(requestObj.responseText); // parse로 객체로 변환 후 안에 있는 배열을 가져옴
+                        result.user.find((item) => {
+                            return item.userName === userName && item.password === password
+                        })
+                    }
+                }
+
+                requestObj.send();
+            }
+
+            // 유저에 맞는 인사말을 출력합니다.
+            sayHi() {
+
+            }
+        }
+
+        const userStorage = new UserStorage();
+        userStorage.searchUser();
+    </script>
+</body>
+
+</html>
