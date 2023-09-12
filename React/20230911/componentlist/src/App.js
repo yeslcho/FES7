@@ -1,8 +1,8 @@
-import Hello from "./Components/Hello";
-import HelloProps from "./Components/HelloProps";
-import Time from "./Components/Time";
-import Resume from "./Components/Resume";
-import ColorText from "./Components/ColorText";
+import Hello from "./Components/Hello";
+import HelloProps from "./Components/HelloProps";
+import Time from "./Components/Time";
+import Resume from "./Components/Resume";
+import ColorText from "./Components/ColorText";
 
 // 모듈 문법의 특징
 // import test, { test2 } from "./Components/test";
