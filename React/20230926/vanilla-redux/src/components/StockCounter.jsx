@@ -11,7 +11,7 @@ export default function StockCounter() {
     });
 
 
-    // store의 state 접근하도록 합니다.
+    // store의 state 접근하도록 합니다. getState의 역할이라고 보면 됨
     const { stock } = useSelector((state) => {
         return {
             stock: state.goodsReducer.stock
