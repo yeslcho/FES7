@@ -10,7 +10,7 @@ export default function App2() {
     // api에 전달할 페이지 값을 관리합니다.
     const [pageToFetch, setPageToFetch] = useState(1);
 
-    // 로딩중인 상태를 관리합니다.
+    // 로딩중인 상태를 관리합니다. 기본 값을 false로 주어서 관리
     const [isLoading, setIsLoading] = useState(false);
 
     const isBottom = useScroll();
