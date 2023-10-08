@@ -11,6 +11,8 @@ import { useState, useEffect } from 'react'
 // }
 // },[/*state값이 들어갑니다.(들어가지 않으면 최초 1번만 실행됩니다.*/)]) 
 
+// 언마운트, 이펙트 알아 둘 것!
+
 function Counter() {
   const [count, setCount] = useState(0)
   const handleCountUp = (e) => {
